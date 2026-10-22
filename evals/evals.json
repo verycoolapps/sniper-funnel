@@ -1,0 +1,77 @@
+{
+  "skill_name": "funnel-sniper",
+  "should_trigger": [
+    "bikin konten TOFU buat produk skincare gue, targetnya cewek 22-30 yang belum kenal brand",
+    "I need a caption for cold audience who doesn't know my brand yet",
+    "nulis email nurturing buat warm leads yang udah download lead magnet gue",
+    "buatkan landing page closing untuk coaching program digital marketing saya",
+    "gue mau bikin konten awareness di Instagram, produknya protein shake lokal",
+    "write a retargeting ad for people who visited my pricing page but didn't buy",
+    "konten marketing tepat sasaran dong, produk gue aplikasi manajemen keuangan UMKM",
+    "buatkan carousel untuk middle-of-funnel audience yang udah tau kategori produknya",
+    "I have a hot lead who ghosted my proposal, write a BOFU follow-up email",
+    "bikin caption yang relate ke buyer journey, target audiensnya freelancer Indonesia",
+    "content untuk awareness stage, target: ibu rumah tangga 25-40 tahun produk meal prep",
+    "buat iklan retargeting untuk yang sudah kunjungi halaman harga tapi belum checkout"
+  ],
+  "should_not_trigger": [
+    "explain what TOFU MOFU BOFU means in marketing",
+    "write a blog post about content marketing strategy in general with no specific product",
+    "proofread this email for grammar",
+    "translate this caption to English",
+    "what is the best social media platform for B2B companies?",
+    "summarize this article about digital marketing trends"
+  ],
+  "behavior": [
+    {
+      "id": "b1",
+      "prompt": "Bikin caption Instagram TOFU untuk brand kopi specialty yang targetnya pekerja kantoran Jakarta yang biasanya minum kopi sachet. Gaya brand: relatable, jujur, sedikit humor. Tidak perlu CTA beli.",
+      "assertions": [
+        "Stage declared as TOFU at the top of output",
+        "Psychological trigger is named with its mechanism, not just a label like 'create curiosity'",
+        "Caption does NOT open with brand name, 'Halo guys', or a generic question opener",
+        "No purchase CTA — soft engagement CTA only: save, follow, comment, or share",
+        "Contains the labeled 'Non-obvious move' field with a specific choice derived from the 'pekerja kantoran + kopi sachet' world",
+        "No fabricated statistics without a real source or [bracket] placeholder",
+        "Platform fit note present and specific to Instagram (character consideration, hashtag count)"
+      ]
+    },
+    {
+      "id": "b2",
+      "prompt": "Write a cart abandonment email for a Rp 2.500.000 online course on freelance graphic design. The prospect added to cart but did not check out. Include a real risk reversal — no fake countdown timer.",
+      "assertions": [
+        "Stage declared as BOFU",
+        "Email references the specific course and price, not a generic product",
+        "Risk reversal is concrete: names the specific bad outcome + timeframe + what seller does",
+        "CTA is a single direct action back to checkout",
+        "No fake scarcity or fake countdown — uses risk reversal as the primary push instead",
+        "No fabricated testimonials — uses a template placeholder or requests real data",
+        "Output is a complete, ready-to-send email, not a description of what to write"
+      ]
+    },
+    {
+      "id": "b3",
+      "prompt": "Produk saya: aplikasi project management untuk agensi kreatif. Audience: owner agensi 5-15 orang yang udah pake tools lain tapi masih merasa berantakan. Bikin email nurturing untuk mereka — tidak tahu stage-nya.",
+      "assertions": [
+        "Auto-detects stage as MOFU with a one-line rationale stated before the content",
+        "At least 2 detection signals are named (e.g., 'audience already uses tools = solution-aware', 'comparison context')",
+        "Email does NOT re-educate about project management basics (that is TOFU content)",
+        "Objection pre-emption is present: addresses why switching from an existing tool is worth it",
+        "CTA is a micro-commitment: demo, case study, or free trial — not a purchase CTA",
+        "Subject line is specific and contextual, not generic like 'Quick question' or 'Just checking in'"
+      ]
+    },
+    {
+      "id": "b4",
+      "prompt": "Buatkan 2 versi caption TOFU dan BOFU untuk produk yang sama: suplemen tidur herbal, target: profesional muda yang sering begadang karena kerjaan. Format: Instagram caption.",
+      "assertions": [
+        "Output contains exactly 2 labeled variant blocks: one TOFU, one BOFU",
+        "TOFU version has no purchase CTA; BOFU version has a direct single-action CTA",
+        "TOFU psychological trigger differs from BOFU trigger and each is named with mechanism",
+        "TOFU banned moves absent (no 'Yuk kepoin', no emoji walls, no generic opener)",
+        "BOFU version includes either risk reversal element or real urgency (not fake countdown)",
+        "Both versions are complete and ready to publish, not outlines"
+      ]
+    }
+  ]
+}
